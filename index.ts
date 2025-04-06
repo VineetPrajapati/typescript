@@ -1,4 +1,4 @@
-// string
+/* // string
 let name1: string = "Vineet";
 console.log(name1);
 
@@ -9,8 +9,9 @@ console.log(num);
 //  Boolean
 let val: boolean = true || false;
 console.log(val);
+*/
 
-// Inference
+/* // Inference
 console.log(`---------------Inference-------------`);
 
 let tech = "TypeScript";
@@ -75,4 +76,59 @@ function person1() : {firstName: string; lastName: string; age: number} {
     age: 45,
   };
 }
-console.log(person1().age);
+console.log(person1().age); */
+
+// type aliases
+console.log(`----Type Aliases-----`);
+type User = {
+  name: string;
+  age: number;
+  location: string;
+};
+const user: User = {
+  name: "John",
+  age: 34,
+  location: "USA",
+};
+user.location = "India";
+console.log(user.location);
+
+console.log(`----Optional Properties-----`);
+
+type UserInfo = {
+  name: string;
+  age: number;
+  email?: string;
+  readonly Mob: number;
+};
+
+const userData: UserInfo = {
+  name: "Alice",
+  age: 34,
+  Mob: 1234567890,
+};
+userData.email = "alice123@gmail.com";
+// userData.Mob = 45643565 this value can't be changed due to its readonly
+console.log(userData);
+
+// Intersection Type
+console.log(`----Intersection/Union Type-----`);
+type UserType1 = {
+  name: string;
+  age: number | string;
+};
+type UserType2 = {
+  email: string;
+  location: string;
+};
+type UserIdentity = UserType1 & UserType2;
+
+let userIdentity: UserIdentity = {
+  name: "Buddha",
+  age: "10000",
+  email: "buddha@gmail.com",
+  location: "Heaven",
+};
+console.log(userIdentity);
+
+
