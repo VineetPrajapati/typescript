@@ -78,7 +78,7 @@ function person1() : {firstName: string; lastName: string; age: number} {
 }
 console.log(person1().age); */
 
-// type aliases
+/* // type aliases
 console.log(`----Type Aliases-----`);
 type User = {
   name: string;
@@ -129,6 +129,91 @@ let userIdentity: UserIdentity = {
   email: "buddha@gmail.com",
   location: "Heaven",
 };
-console.log(userIdentity);
+console.log(userIdentity);*/
 
+// literal types
+console.log(`-----Literal Types-----`);
+let myColor: "Red" | "Greed" | "Blue";
+myColor = "Greed";
+console.log(myColor);
 
+// Tuples
+console.log(`-----Tuples-----`);
+let myArr: [string, number, boolean] = ["name", 12, false];
+let [first, second] = myArr;
+console.log(first);
+
+// enum
+console.log(`-----enum-----`);
+enum weatherConditions {
+  Sunny = "sunny",
+  Cloudy = "cloudy",
+  Rainy = "rainy",
+  Snowy = "snowy",
+}
+let currentCOndition = weatherConditions.Sunny;
+console.log(currentCOndition);
+
+// Interface
+console.log(`-----Interface-----`);
+interface MoviesDetails {
+  readonly name: string;
+  rating: number;
+  genre: string;
+  description?: string;
+}
+
+let movie1: MoviesDetails = {
+  name: "identity",
+  rating: 9,
+  genre: "crime",
+};
+console.log(
+  `Name: ${movie1.name}, genre: ${movie1.genre}, rating: ${movie1.rating}`
+);
+
+interface EmployeeDetail {
+  name: string;
+  id: string;
+  designation: string;
+  year: number;
+  location: string;
+  greet: () => void;
+}
+
+const Employee1: EmployeeDetail = {
+  name: "John Doe",
+  id: "ABC",
+  designation: "Web Developer",
+  year: 4,
+  location: "India",
+  greet: () => `Hey! there`,
+};
+
+function employeeDetail(person: EmployeeDetail) {
+  return `Name: ${person.name}, Id: ${person.id}, designation: ${
+    person.designation
+  }, year: ${person.year}, location: ${person.location}, ${person.greet()}`;
+}
+console.log(employeeDetail(Employee1));
+
+// interface declarative
+console.log(`-----Interface Declarative-----`);
+interface Car {
+  brand: string;
+  start(): void;
+}
+interface Car {
+  model: string;
+  stop(): void;
+}
+
+let carInfo: Car = {
+  brand: "BMW",
+  model: "X5",
+  start: () => console.log("start"),
+  stop: () => console.log("stop!"),
+};
+console.log(carInfo.brand , carInfo.model);
+carInfo.start();
+carInfo.stop();
