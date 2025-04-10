@@ -131,7 +131,7 @@ let userIdentity: UserIdentity = {
 };
 console.log(userIdentity);*/
 
-// literal types
+/*// literal types
 console.log(`-----Literal Types-----`);
 let myColor: "Red" | "Greed" | "Blue";
 myColor = "Greed";
@@ -217,3 +217,39 @@ let carInfo: Car = {
 console.log(carInfo.brand , carInfo.model);
 carInfo.start();
 carInfo.stop();
+*/
+
+// Generic Type
+console.log(`-----Generic Type-----`);
+
+function logVal<Type>(value: Type): void {
+  console.log(value);
+}
+logVal<string>("Hello");
+logVal<number>(12345);
+
+function getFirstElem<T>(arr: T[]): void {
+  console.log(arr[0]);
+}
+getFirstElem<number>([5, 6, 7, 8, 4]);
+getFirstElem<string>(["Hello", "world"]);
+
+interface ApiResponse<T> {
+  status: number;
+  data: T;
+}
+const userRes: ApiResponse<{ name: string }> = {
+  status: 1,
+  data: {
+    name: "Vineet",
+  },
+};
+console.log(userRes.data.name);
+
+const userRes1: ApiResponse<{ num: number }> = {
+  status: 0,
+  data: {
+    num: 2354,
+  },
+};
+console.log(userRes1.data.num);
