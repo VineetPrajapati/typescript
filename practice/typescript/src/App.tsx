@@ -2,6 +2,7 @@
 // import Button from "./components/Button";
 // import Counter from "./components/Counter";
 // import UserInfo from "./components/UserInfo";
+import Todos from "./components/Todos";
 import UserProfile from "./components/UserProfile";
 // import { Admin, User } from "./types/type";
 // const user: User = {
@@ -29,6 +30,7 @@ const App = () => {
       <AdminInfo admin={admin} />
       <Counter /> */}
       <UserProfile />
+      <Todos />
     </div>
   );
 };
