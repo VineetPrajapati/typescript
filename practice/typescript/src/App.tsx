@@ -18,13 +18,14 @@
 //   lastLogin: new Date(),
 // };
 
-import Form from "./components/Form";
+import InputFocus from "./components/InputFocus";
+
+// import Form from "./components/Form";
 
 const App = () => {
   return (
     <div>
-      <Form />
-
+      <InputFocus />
     </div>
   );
 };
