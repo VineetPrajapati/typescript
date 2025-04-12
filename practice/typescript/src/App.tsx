@@ -2,8 +2,8 @@
 // import Button from "./components/Button";
 // import Counter from "./components/Counter";
 // import UserInfo from "./components/UserInfo";
-import Todos from "./components/Todos";
-import UserProfile from "./components/UserProfile";
+// import Todos from "./components/Todos";
+// import UserProfile from "./components/UserProfile";
 // import { Admin, User } from "./types/type";
 // const user: User = {
 //   id: 1,
@@ -18,19 +18,13 @@ import UserProfile from "./components/UserProfile";
 //   lastLogin: new Date(),
 // };
 
+import Form from "./components/Form";
+
 const App = () => {
   return (
     <div>
-      {/* <Button
-        label="Click"
-        onClick={() => console.log("Clicked")}
-        disabled={false}
-      />
-      <UserInfo user={user} />
-      <AdminInfo admin={admin} />
-      <Counter /> */}
-      <UserProfile />
-      <Todos />
+      <Form />
+
     </div>
   );
 };
