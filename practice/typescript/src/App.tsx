@@ -19,6 +19,7 @@
 // };
 
 import ContactForm from "./components/ContactForm";
+import CounterUsingContext from "./components/CounterUsingContext";
 import HandleEvent from "./components/HandleEvent";
 
 // import InputFocus from "./components/InputFocus";
@@ -30,6 +31,7 @@ const App = () => {
     <div>
       <ContactForm />
       <HandleEvent />
+      <CounterUsingContext />
     </div>
   );
 };
