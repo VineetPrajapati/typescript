@@ -19,6 +19,7 @@
 // };
 
 import ContactForm from "./components/ContactForm";
+import HandleEvent from "./components/HandleEvent";
 
 // import InputFocus from "./components/InputFocus";
 
@@ -28,6 +29,7 @@ const App = () => {
   return (
     <div>
       <ContactForm />
+      <HandleEvent />
     </div>
   );
 };
