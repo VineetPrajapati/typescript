@@ -18,10 +18,12 @@
 //   lastLogin: new Date(),
 // };
 
-import ContactForm from "./components/ContactForm";
-import CounterUsingContext from "./components/CounterUsingContext";
-import HandleEvent from "./components/HandleEvent";
-import PostData from "./components/PostData";
+import FormHook from "./components/FormHook";
+
+// import ContactForm from "./components/ContactForm";
+// import CounterUsingContext from "./components/CounterUsingContext";
+// import HandleEvent from "./components/HandleEvent";
+// import PostData from "./components/PostData";
 
 // import InputFocus from "./components/InputFocus";
 
@@ -30,10 +32,7 @@ import PostData from "./components/PostData";
 const App = () => {
   return (
     <div>
-      <ContactForm />
-      <HandleEvent />
-      <CounterUsingContext />
-      <PostData />
+      <FormHook />
     </div>
   );
 };
